@@ -10,14 +10,14 @@ body {
 
 h1 {
     padding-top: 30px;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     color: #86BC24;
 }
 
-hr {
+#entete {
     border: 0px;
-    border-top: 5px solid #486611;
+    border-top: 8px solid #486611;
 }
 
 
@@ -32,11 +32,135 @@ img {
     align-self: flex-end;
     width: auto;
     height: 66px;
+    padding: 5px;
 }
 
-.clippath {
+/* .clippath {
+    margin: 10px;
     clip-path: polygon(50% 25%, 50% 25%, 57.75% 50%, 50% 75%, 50% 75%, 0% 75%, 0% 25%);
     background-color: #85bb23;
     height: 20px;
     width: 50px;
+} */
+
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+.fixe {
+    font-weight: bold;
+}
+
+.inputs {
+    border: 0;
+}
+
+#nom {
+    width: 40%;
+}
+
+#prenom {
+    width: 35%;
+}
+
+#formation {
+    width: 60%;
+}
+
+#demande {
+    width: 35%;
+}
+
+#au, #de, #ha {
+    width: 13%;
+}
+
+#ou {
+    margin-left: 55px;
+}
+
+#du {
+    width: 13%;
+}
+
+#txtsoit {
+    margin-left: 135px;
+}
+
+#soit {
+    width: 120px;
+    
+}
+
+#txtdu {
+    margin-left: 24px;
+}
+
+#droite {
+    font-size: 13px;
+    margin-left: 420px;
+    margin-bottom: 6px;
+}
+
+#merci {
+    margin-left: 410px;
+    margin-top: 12px;
+}
+
+.texte-justifie {/*  */
+    font-size: 12px;
+    line-height: 1.5;
+    font-style: italic;
+}
+/* .ligne {
+    display: block;
+} */
+
+#absence {
+    margin-left: 410px;
+}
+
+#nomAbsent {
+    margin-left: 5px;
+    border: 0px;
+
+}
+
+#signature {
+    width: 340px;
+    margin-left: 380px;
+}
+
+
+.cachet-absence{
+    display: flex;
+}
+
+#stagiaire {
+    margin-top: 100px;
+    margin-left: 380px;
+    width: 340px;
+    height: 90px;
+    text-align: center;
+    padding: 15px;
+}
+
+#formateur {
+    margin-left: 380px;
+    width: 340px;
+    height: 90px;
+    text-align: center;
+    padding: 15px;
+}    
+
+#avis {
+    margin-left: 380px;
+    height: 180px;
+    text-align: center;
+}
+
+#decision {
+    height: 180px;
+    text-align: center;
 }

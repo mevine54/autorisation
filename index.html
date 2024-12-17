@@ -1,93 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Autorisation d'abscense</title>
+    <title>Autorisation d'absense</title>
 </head>
+
 <body>
     <header>
         <h1>
             Autorisation d'Absence
         </h1>
-            <img src="assets/img/logoAfpa.png" alt="imageLogoAfpa" id="logo">
+        <img src="assets/img/logoAfpa.png" alt="imageLogoAfpa" id="logo">
         <br>
-        <p>
-            
-        </p>
     </header>
-    <hr><br>
-    <div class="clippath"></div>
-    <br><br>
+    <hr id="entete">
+    <!-- <div class="clippath"></div> -->
+    <svg width="40" height="50" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="100,25 100,25 115.5,50 100,75 100,75 0,75 0,25" fill="#85bb23" />
+    </svg>
     <div class="container">
-        <label for="name">NOM : </label>
-        <input type="text" id="nom">
-        <label for="firstname">PRENOM : </label>
-        <input type="text" id="prenom"><br><br>
+        <label for="name" class="fixe">NOM : </label>
+        <input type="text" id="nom" class="inputs">
+        <label for="firstname" class="fixe">PRENOM : </label>
+        <input type="text" id="prenom" class="inputs"><br><br>
 
-        <label for="formation">Formation suivie : </label>
-        <input type="text" id="formation"><br><br>
+        <label for="formation" class="fixe">Formation suivie : </label>
+        <input type="text" id="formation" class="inputs"><br><br>
 
-        <label for="demande">Demande l'autorisation de s'absenter du centre : </label>
+        <label for="demande" class="fixe">Demande l'autorisation de s'absenter du centre : </label>
 
-        <label for="heures">Heures</label>
+        <label for="heures" class="fixe">Heures</label>
         <input type="radio" name="heures" id="heures">
-        <label for="jours">Jours</label>
+        <label for="jours" class="fixe">Jours</label>
         <input type="radio" name="jours" id="jours">
         <br><br>
 
-        <label for="le">Le</label>
-        <input type="text" id="demande">
+        <label for="le" class="fixe">Le</label>
+        <input type="text" id="demande" class="inputs">
 
-        <label for="ou">ou</label>
-        <label for="du">Du</label>
-        <input type="text" id="du">
-        <label for="au">au</label>
-        <input type="text" id="au"><br><br>
+        <label for="ou" class="fixe" id="ou">ou</label>&emsp;&emsp;
+        <label for="du" class="fixe" id="txtdu">Du</label>
+        <input type="text" id="du" class="inputs">
+        <label for="au" class="fixe">au</label>
+        <input type="text" id="au" class="inputs"><br><br>
 
-        <label for="de">De</label>
-        <input type="text" id="de">
-        <label for="ha">h  à</label>
-        <input type="text" id="ha">
-        <label for="ah">h</label>&emsp;
+        <label for="de" class="fixe">De</label>
+        <input type="text" id="de" class="inputs">
+        <label for="ha" class="fixe">h à</label>
+        <input type="text" id="ha" class="inputs">
+        <label for="ah" class="fixe">h</label>&emsp;&emsp;
 
-        <label for="soit">Soit</label>
-        <input type="text" id="soit">
-        <label for="jours">jours complets</label><br><br>
-        <label for="motif">Pour le motif suivant : </label>
+        <label for="soit" id="txtsoit" class="fixe">Soit</label>
+        <input type="text" id="soit" class="inputs">
+        <label for="jours" class="fixe">jours complets</label><br><br>
+        <label for="motif" class="fixe">Pour le motif suivant : </label>
+        <br><br>
 
         <!-- javaScript -->
         <div class="column">
             <p id="gauche">
-
             </p>
         </div>
         <div class="column">
             <p id="droite">
                 Cachet et signature de l'entreprise ou de
             </p>
-            <p id="cachet">
-                Merci d'apposer votre cachet pour justifier de l'absence de la formation de M
-            </p>
-        </div>
+            <hr id="signature">
+            <div id="cachet" class="texte-justifie">
+                <div class="ligne" id="merci">Merci d'apposer votre cachet pour justifier de</div>
+                <div class="cachet-absence">
+                    <div class="ligne" id="absence">l'absence de la formation de M</div>
+                    <div><input type="text" id="nomAbsent"></div>
+                </div>
+            </div>
+        </div><br><br>
         <div>
-            <input type="text" id="nomAbsent">
-        </div>
-        <div>
-            <textarea name="stagiaire" id="stagiaire">Date et signature du stagiaire</textarea>
-        </div>
-        <div>
-            <textarea name="formateur" id="formateur">Date et signature du formateur</textarea>
+            <textarea class="date" name="stagiaire" id="stagiaire"
+                placeholder="Date et signature du stagiaire"></textarea>
+            <textarea name="formateur" id="formateur" class="date"
+                placeholder="Date et signature du formateur"></textarea>
         </div>
         <br><br>
         <div>
-            <textarea name="avis" id="avis">Avis du MF pour décision du Directeur</textarea>
-        </div>
-        <div>
-            <textarea name="decision" id="decision">Décision du Directeur</textarea>
+            <textarea name="avis" id="avis" placeholder="Avis du MF pour décision du Directeur"></textarea>
+            <textarea name="decision" id="decision" placeholder="Décision du Directeur"></textarea>
         </div>
     </div>
 </body>
+
 </html>
