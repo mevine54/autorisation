@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    background: #fff;
+}
+
+.header-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #86BC24;
+    margin: 0;
+}
+
+#logo {
+    height: 66px;
+    width: auto;
+    align-self: flex-end;
+}
+
+#entete {
+    border: 0;
+    border-top: 8px solid #486611;
+    margin: 10px 0 0 0;
+}
+
+.shape-container {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.container {
+    width: 95%;
+    margin: 20px auto;
+}
+
+/* Labels et inputs */
+.fixe {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.inputs {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px;
+    margin-right: 20px;
+}
+
+.long {
+    width: 60%;
+}
+
+.medium {
+    width: 35%;
+}
+
+.short {
+    width: 13%;
+}
+
+.xshort {
+    width: 50px;
+    text-align: center;
+}
+
+.radio-label {
+    font-weight: normal;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Conteneur deux colonnes */
+.left-right-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+.droite {
+    float: right;
+    width: 45%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.titre-droite {
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#signature {
+    width: 340px;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+.texte-justifie {
+    font-size: 12px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.cachet-absence {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#nomAbsent {
+    border: 0;
+    border-bottom: 1px solid #000;
+    margin-left: 5px;
+    width: 80px;
+}
+
+.date {
+    display: block;
+    width: 340px;
+    height: 90px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+    resize: vertical;
+    border: 1px solid #ccc;
+}
+
+.avis-decision {
+    display: flex;
+    gap: 20px;
+}
+
+#avis, #decision {
+    width: 48%;
+    height: 180px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+
+@media(max-width: 768px) {
+    .left-right-container {
+        flex-direction: column;
+    }
+
+    .column, .droite {
+        width: 100%;
+        float: none;
+    }
+}

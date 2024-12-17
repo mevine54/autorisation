@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Autorisation d'absence</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Accessibilité: s'assurer que les couleurs ont assez de contraste, 
+         et éventuellement tester avec un validateur d'accessibilité. -->
+</head>
+<body>
+    <header class="header-container">
+        <h1>Autorisation d'Absence</h1>
+        <!-- Texte alternatif descriptif du logo pour aider les lecteurs d'écran -->
+        <img src="assets/img/logoAfpa.png" alt="Logo de l'Afpa" id="logo">
+    </header>
+
+    <hr id="entete">
+
+    <div class="shape-container">
+        <svg width="40" height="50" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="100,25 100,25 115.5,50 100,75 100,75 0,75 0,25" fill="#85bb23" />
+        </svg>
+    </div>
+
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <label for="nom" class="fixe">NOM :</label>
+                <input type="text" id="nom" name="nom" class="inputs" aria-label="Saisir le nom">
+
+                <label for="prenom" class="fixe">PRENOM :</label>
+                <input type="text" id="prenom" name="prenom" class="inputs" aria-label="Saisir le prénom">
+            </div>
+
+            <div class="form-row">
+                <label for="formation" class="fixe">Formation suivie :</label>
+                <input type="text" id="formation" name="formation" class="inputs long" aria-label="Nom de la formation suivie">
+            </div>
+
+            <div class="form-row">
+                <span class="fixe">Demande l'autorisation de s'absenter du centre :</span>
+
+                <input type="radio" name="duree" id="heures" value="heures">
+                <label for="heures" class="radio-label">Heures</label>
+
+                <input type="radio" name="duree" id="jours" value="jours">
+                <label for="jours" class="radio-label">Jours</label>
+            </div>
+
+            <div class="form-row">
+                <label for="demande" class="fixe">Le</label>
+                <input type="text" id="demande" name="demande-date-le" class="inputs medium" aria-label="Date unique">
+
+                <label for="ou" class="fixe" id="ou">ou</label>
+
+                <label for="du" class="fixe" id="txtdu">Du</label>
+                <input type="text" id="du" name="du" class="inputs short" aria-label="Date de début">
+                <label for="au" class="fixe">au</label>
+                <input type="text" id="au" name="au" class="inputs short" aria-label="Date de fin">
+            </div>
+
+            <div class="form-row">
+                <label for="de" class="fixe">De</label>
+                <input type="text" id="de" name="de" class="inputs xshort" aria-label="Heure de début">
+                <label for="ha" class="fixe">h à</label>
+                <input type="text" id="ha" name="ha" class="inputs xshort" aria-label="Heure de fin">
+                <label for="ha" class="fixe">h</label>
+
+                <label for="soit" id="txtsoit" class="fixe">Soit</label>
+                <input type="text" id="soit" name="soit" class="inputs short" aria-label="Durée en jours">
+                <label for="soit" class="fixe">jours complets</label>
+            </div>
+
+            <div class="form-row">
+                <label for="motif" class="fixe">Pour le motif suivant :</label>
+            </div>
+        </form>
+
+        <!-- Deux colonnes -->
+        <div class="left-right-container">
+            <!-- Colonne gauche, générée par JS -->
+            <div class="column gauche">
+                <div id="gauche" aria-live="polite"></div>
+            </div>
+
+            <!-- Colonne droite, fixe en HTML -->
+            <div class="column droite">
+                <p class="titre-droite">Cachet et signature de l'entreprise ou de</p>
+                <hr id="signature">
+                <div id="cachet" class="texte-justifie">
+                    <div id="merci">Merci d'apposer votre cachet pour justifier de</div>
+                    <div class="cachet-absence">
+                        <div id="absence">l'absence de la formation de M</div>
+                        <div><input type="text" id="nomAbsent" name="nomAbsent" aria-label="Nom de la personne absente"></div>
+                    </div>
+                </div>
+
+                <br><br>
+                <div>
+                    <textarea class="date" name="stagiaire" id="stagiaire"
+                              placeholder="Date et signature du stagiaire" aria-label="Date et signature du stagiaire"></textarea>
+                    <textarea name="formateur" id="formateur" class="date"
+                              placeholder="Date et signature du formateur" aria-label="Date et signature du formateur"></textarea>
+                </div>
+
+                <br><br>
+                <div class="avis-decision">
+                    <textarea name="avis" id="avis" placeholder="Avis du MF pour décision du Directeur" aria-label="Avis du MF"></textarea>
+                    <textarea name="decision" id="decision" placeholder="Décision du Directeur" aria-label="Décision du Directeur"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="script2.js"></script>
+</body>
+</html>

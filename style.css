@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #86BC24;
+    margin: 0;
+}
+
+#logo {
+    height: 66px;
+    width: auto;
+    align-self: flex-end;
+}
+
+#entete {
+    border: 0;
+    border-top: 8px solid #486611;
+    margin: 10px 0 0 0;
+}
+
+/* Le polygone vert */
+.shape-container {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+/* Container général */
+.container {
+    width: 95%;
+    margin: 20px auto;
+}
+
+/* Labels et inputs */
+.fixe {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.inputs {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px;
+    margin-right: 20px;
+}
+
+.long {
+    width: 60%;
+}
+
+.medium {
+    width: 35%;
+}
+
+.short {
+    width: 13%;
+}
+
+.xshort {
+    width: 50px;
+    text-align: center;
+}
+
+.radio-label {
+    font-weight: normal;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#ou {
+    margin: 0 15px;
+}
+
+#txtdu {
+    margin-left: 10px;
+}
+
+/* Mise en page des deux colonnes (gauche: JS, droite: fixe) */
+.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    margin-top: 20px;
+}
+
+.droite {
+    float: right;
+    width: 45%;
+    margin-top: 20px;
+}
+
+/* Zone de droite */
+.titre-droite {
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#signature {
+    width: 340px;
+    margin-left: 0;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+.texte-justifie {
+    font-size: 12px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+#merci {
+    margin-top: 12px;
+}
+
+.cachet-absence {
+    display: flex;
+    align-items: center;
+}
+
+#absence {
+    margin-right: 5px;
+}
+
+#nomAbsent {
+    border: 0;
+    border-bottom: 1px solid #000;
+    margin-left: 5px;
+    width: 80px;
+}
+
+/* Textareas */
+.date {
+    display: block;
+    width: 340px;
+    height: 90px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.avis-decision {
+    display: flex;
+    gap: 20px;
+}
+
+#avis, #decision {
+    width: 48%;
+    height: 180px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}

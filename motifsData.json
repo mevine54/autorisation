@@ -1,0 +1,67 @@
+[
+    {
+        "sectionTitle": "Code 01 : Retard absence non rémunéré",
+        "motifs": [
+            { "label": "Retard", "code": "01" }
+        ]
+    },
+    {
+        "sectionTitle": "Code 04 : Grève Afpa",
+        "motifs": [
+            { "label": "Grève Afpa", "code": "04" }
+        ]
+    },
+    {
+        "sectionTitle": "Code 05 : Maladie",
+        "motifs": [
+            { "label": "Maladie", "code": "05" }
+        ]
+    },
+    {
+        "sectionTitle": "Code 06 : Absence Légale",
+        "motifs": [
+            { "label": "Naissance ou adoption (3 jours)", "code": "06-01" },
+            { "label": "Mariage (4 jours)", "code": "06-02" },
+            { "label": "Mariage d'un enfant (1 jour)", "code": "06-03" },
+            { "label": "Décès du conjoint ou partenaire (2 jours)", "code": "06-04" },
+            { "label": "Décès du père, de la mère, du beau-père, de la belle-mère, d'un frère ou d'une soeur (1 jour)", "code": "06-05" },
+            { "label": "Visite médicale obligatoire de la grossesse", "code": "06-06" },
+            { "label": "Stagiaire élu membre du CA d'une caisse de sécurité sociale", "code": "06-07" }
+        ]
+    },
+    {
+        "sectionTitle": "Code 20 - 21 - 30 - 31 - 40 - 41 : Accident",
+        "motifs": [
+            { "label": "Accident travail sans arrêt", "code": "20" },
+            { "label": "Accident travail avec arrêt", "code": "21" },
+            { "label": "Accident trajet sans arrêt", "code": "30" },
+            { "label": "Accident trajet avec arrêt", "code": "31" },
+            { "label": "Accident travail hors Afpa sans arrêt", "code": "40" },
+            { "label": "Accident travail hors Afpa avec arrêt", "code": "41" }
+        ]
+    },
+    {
+        "sectionTitle": "Code 98 : Absence autorisée non rémunérée",
+        "motifs": [
+            { "label": "Recherche PE", "code": "98-01" },
+            { "label": "Recherche d'un emploi", "code": "98-02" },
+            { "label": "Visite d'un salon", "code": "98-03" },
+            { "label": "Enquête en entreprise", "code": "98-04" },
+            { "label": "Visite d'un travail au centre", "code": "98-05" },
+            { "label": "RDV psychologue du travail", "code": "98-06" },
+            { "label": "Rendez-vous POLE EMPLOI", "code": "98-07" },
+            { "label": "Absence pour fêtes religieuses hors jours fériés légaux", "code": "98-08" },
+            { "label": "Grève des transports", "code": "98-09" },
+            { "label": "Intempéries", "code": "98-10" },
+            { "label": "RDV avec le conseiller militaire", "code": "98-11" },
+            { "label": "Rdv avec le juge, Convocation au tribunal ou commissariat", "code": "98-12" },
+            { "label": "Recherche de logement, Rdv organismes divers", "code": "98-13" }
+        ]
+    },
+    {
+        "sectionTitle": "Code 99 : Absence non autorisée non rémunérée",
+        "motifs": [
+            { "label": "Absence non autorisée", "code": "99" }
+        ]
+    }
+]
