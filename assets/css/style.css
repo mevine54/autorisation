@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    padding-top: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #86BC24;
+}
+
+hr {
+    border: 0px;
+    border-top: 5px solid #486611;
+}
+
+
+header {
+    display: flex;
+}
+
+
+img {
+    /* position: absolute; */
+    margin-left: auto;
+    align-self: flex-end;
+    width: auto;
+    height: 66px;
+}
+
+.clippath {
+    clip-path: polygon(50% 25%, 50% 25%, 57.75% 50%, 50% 75%, 50% 75%, 0% 75%, 0% 25%);
+    background-color: #85bb23;
+    height: 20px;
+    width: 50px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Autorisation d'abscense</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Autorisation d'Absence
+        </h1>
+            <img src="assets/img/logoAfpa.png" alt="imageLogoAfpa" id="logo">
+        <br>
+        <p>
+            
+        </p>
+    </header>
+    <hr><br>
+    <div class="clippath"></div>
+    <br><br>
+    <div class="container">
+        <label for="name">NOM : </label>
+        <input type="text" id="nom">
+        <label for="firstname">PRENOM : </label>
+        <input type="text" id="prenom"><br><br>
+
+        <label for="formation">Formation suivie : </label>
+        <input type="text" id="formation"><br><br>
+
+        <label for="demande">Demande l'autorisation de s'absenter du centre : </label>
+
+        <label for="heures">Heures</label>
+        <input type="radio" name="heures" id="heures">
+        <label for="jours">Jours</label>
+        <input type="radio" name="jours" id="jours">
+        <br><br>
+
+        <label for="le">Le</label>
+        <input type="text" id="demande">
+
+        <label for="ou">ou</label>
+        <label for="du">Du</label>
+        <input type="text" id="du">
+        <label for="au">au</label>
+        <input type="text" id="au"><br><br>
+
+        <label for="de">De</label>
+        <input type="text" id="de">
+        <label for="ha">h  à</label>
+        <input type="text" id="ha">
+        <label for="ah">h</label>&emsp;
+
+        <label for="soit">Soit</label>
+        <input type="text" id="soit">
+        <label for="jours">jours complets</label><br><br>
+        <label for="motif">Pour le motif suivant : </label>
+
+        <!-- javaScript -->
+        <div class="column">
+            <p id="gauche">
+
+            </p>
+        </div>
+        <div class="column">
+            <p id="droite">
+                Cachet et signature de l'entreprise ou de
+            </p>
+            <p id="cachet">
+                Merci d'apposer votre cachet pour justifier de l'absence de la formation de M
+            </p>
+        </div>
+        <div>
+            <input type="text" id="nomAbsent">
+        </div>
+        <div>
+            <textarea name="stagiaire" id="stagiaire">Date et signature du stagiaire</textarea>
+        </div>
+        <div>
+            <textarea name="formateur" id="formateur">Date et signature du formateur</textarea>
+        </div>
+        <br><br>
+        <div>
+            <textarea name="avis" id="avis">Avis du MF pour décision du Directeur</textarea>
+        </div>
+        <div>
+            <textarea name="decision" id="decision">Décision du Directeur</textarea>
+        </div>
+    </div>
+</body>
+</html>
