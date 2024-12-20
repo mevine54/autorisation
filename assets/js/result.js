@@ -1,13 +1,27 @@
-let formAbsence =   JSON.parse( localStorage.getItem("formAbsence") ) ;
-let outputPhrase = `
-            <p>
-                L'étudiant <strong>${formAbsence.prenom} ${formAbsence.nom}</strong> 
-                en formation <strong>${formAbsence.formation}</strong> 
-                est absent pour la raison suivante : 
-                <em>${formAbsence.reasonmissing || "Non spécifiée"}</em>.
-            </p>
-        `;
+document.addEventListener('DOMContentLoaded', () => {
+    let formAbsence = JSON.parse(localStorage.getItem("formAbsence"));
 
-        // Insérer la phrase dans la page HTML
-        document.getElementById("content").innerHTML = outputPhrase;
-console.log(formAbsence)
+    if (!formAbsence) {
+        document.getElementById("content").textContent = "Aucune donnée de formulaire trouvée.";
+        return;
+    }
+
+    // Validation des données
+    const nom = formAbsence.nom || "Non spécifié";
+    const prenom = formAbsence.prenom || "Non spécifié";
+    const formation = formAbsence.formation || "Non spécifiée";
+    const reasonmissing = formAbsence.reasonmissing || "Non spécifiée";
+
+    let outputPhrase = `
+        <p>
+            L'étudiant <strong>${prenom} ${nom}</strong>
+            en formation <strong>${formation}</strong>
+            est absent pour la raison suivante :
+            <em>${reasonmissing}</em>.
+        </p>
+    `;
+
+    // Insérer la phrase dans la page HTML
+    document.getElementById("content").innerHTML = outputPhrase;
+    console.log(formAbsence);
+});

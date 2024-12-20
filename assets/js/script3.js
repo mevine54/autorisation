@@ -70,7 +70,7 @@ if (!gaucheContainer) {
                         label.style.display = "block";
                         const radio = document.createElement('input');
                         radio.type = 'radio';
-                        radio.setAttribute("name", "reasonmissing" )
+                        radio.setAttribute("name", "reasonmissing");
                         radio.value = motifItem.label;
                         radio.setAttribute('aria-label', motifItem.label);
 
@@ -88,19 +88,50 @@ if (!gaucheContainer) {
             gaucheContainer.textContent = "Impossible de charger les motifs.";
         });
 
+    let formAbsence = document.getElementById("form-absence");
+    formAbsence.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-        let formAbsence = document.getElementById("form-absence")
-        formAbsence.addEventListener("submit",(e)=>{
-            e.preventDefault();
-            let formData = new FormData(formAbsence)
-            let formObject = {}
-            formData.forEach((value,key)=>{
-                formObject[key]= value;
-            })
-            localStorage.setItem("formAbsence",JSON.stringify( formObject ))
-            console.log(formObject)
-            window.location.href = "result.html"
-        })
+        // Validation des champs
+        const nom = document.getElementById('nom').value.trim();
+        const prenom = document.getElementById('prenom').value.trim();
+        const formation = document.getElementById('formation').value.trim();
+        const duree = document.querySelector('input[name="duree"]:checked');
+        const reasonmissing = document.querySelector('input[name="reasonmissing"]:checked');
 
+        if (!nom || !prenom || !formation || !duree || !reasonmissing) {
+            alert("Veuillez remplir tous les champs obligatoires.");
+            return;
+        }
 
+        let formData = new FormData(formAbsence);
+        let formObject = {};
+        formData.forEach((value, key) => {
+            formObject[key] = value;
+        });
+
+        localStorage.setItem("formAbsence", JSON.stringify(formObject));
+        console.log(formObject);
+        window.location.href = "result.html";
+    });
+
+    // Calcul automatique du totalmissday
+    const beginmissday = document.querySelector('input[name="beginmissday"]');
+    const endmissday = document.querySelector('input[name="endmissday"]');
+    const totalmissday = document.querySelector('input[name="totalmissday"]');
+
+    function calculateTotalMissDay() {
+        if (beginmissday.value && endmissday.value) {
+            const startDate = new Date(beginmissday.value);
+            const endDate = new Date(endmissday.value);
+            const diffTime = Math.abs(endDate - startDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            totalmissday.value = diffDays;
+        } else {
+            totalmissday.value = '';
+        }
+    }
+
+    beginmissday.addEventListener('change', calculateTotalMissDay);
+    endmissday.addEventListener('change', calculateTotalMissDay);
 }

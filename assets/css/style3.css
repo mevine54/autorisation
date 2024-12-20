@@ -187,6 +187,15 @@ h1 {
     display: none;
 }
 
+#submit {
+    margin-left: 50%;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 70px;
+    height: 25px;
+    border-radius: 4px;
+}
+
 /* Responsive */
 @media(max-width: 768px) {
     .left-right-container {
